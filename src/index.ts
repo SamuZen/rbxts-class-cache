@@ -1,3 +1,3 @@
-export function makeHello(name: string) {
-	return `Hello from ${name}!`;
-}
+export { ClassCache } from "./class-cache";
+export { IClassCache } from "./class-cache-types";
+export { IClassCachable } from "./cachable";
