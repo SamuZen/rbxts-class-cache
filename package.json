@@ -1,16 +1,20 @@
 {
   "name": "@rbxts/class-cache",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.3",
+  "description": "WIP - A class cache for rbxts",
   "main": "out/init.lua",
   "scripts": {
     "build": "rbxtsc",
     "watch": "rbxtsc -w",
     "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamuZen/rbxts-class-cache"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "types": "out/index.d.ts",
   "files": [
     "out",
