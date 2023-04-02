@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/class-cache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "WIP - A class cache for rbxts",
   "main": "out/init.lua",
   "scripts": {
