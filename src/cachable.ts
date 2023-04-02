@@ -1,15 +1,18 @@
-import { IClassCache } from "./class-cache-types";
+import { ClassCache } from "./classCache";
 
-export abstract class IClassCachable {
-	cache: IClassCache | undefined;
-	CF_FAR_AWAY: CFrame = new CFrame(0, 10e8, 0);
+export abstract class Cachable {
+	cache: ClassCache<Cachable> | undefined;
+	defaultCFrame: CFrame = new CFrame(0, 10e8, 0);
 
-	abstract CacheCreated(): void;
-	abstract CacheSetParent(parent: Instance | undefined): void;
-	abstract CacheMakeNew(): IClassCachable;
-	abstract CacheReturned(): void;
-	abstract CacheClear(): void;
-	CacheSetCache(cache: IClassCache): void {
+	abstract hide(): void;
+	abstract setParent(parent: Instance | undefined): void;
+	abstract create(): Cachable;
+
+	created(): void {}
+	returned(): void {}
+	clear(): void {}
+	gotten(): void {}
+	setCache(cache: ClassCache<Cachable>): void {
 		this.cache = cache;
 	}
 }
